@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>bounce</title>
+</head>
+<style>
+  body{
+    background-color: black;
+  }
+</style>
+<body>
+  <canvas width="500" height="500" id="canvas">
+    
+    
+  </canvas>
+  
+  <script>
+  
+  
+  function draw () {
+    var cWidth = 500;
+    var cHeight = 500;
+    var x = Math.floor(Math.random() * cWidth);
+    var y = Math.floor(Math.random () * cHeight);
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+    ctx.clearRect(0,0,500,500);
+    ctx.strokeStyle = "Green";
+    ctx.fillStyle = "Red";
+    ctx.lineWidth = 3;
+    ctx.beginPath()
+    ctx.arc(x, y, 20,0, Math.PI * 2, false);
+    ctx.fill();
+   
+  }
+  setInterval(draw, 200);
+ 
+  </script>
+</body>
+</html>
